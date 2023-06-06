@@ -11,7 +11,6 @@ async function searchWeather(city) {
 
     if(response.status == 404) {
         document.querySelector(".error").style.display = "block";
-        document.querySelector(".weather").style.display = "none";
     } else {
         var data = await response.json();
 
@@ -52,7 +51,6 @@ async function searchWeather(city) {
             weatherIcon.src="./images/wind.png"
         };
 
-        document.querySelector(".weather").style.display = "block";
         document.querySelector(".error").style.display = "none";
 
     }
